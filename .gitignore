@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+*.log
+
+# Local context / scratch (optional)
+контекст.md
+контекстлендинг.md
+
+# Office exports (лучше не в репо)
+*.docx
+*.pptx
