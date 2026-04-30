@@ -470,7 +470,7 @@
 
   /* ── CONTACT ── */
   .contact {
-    background: linear-gradient(145deg, #4a3d6e 0%, #6b4a7a 100%);
+    background: linear-gradient(145deg, var(--dark) 0%, #4a3d5c 100%);
     position: relative; overflow: hidden;
   }
   .contact::before {
@@ -515,30 +515,28 @@
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center; gap: 32px;
-    background: white;
+    background: linear-gradient(135deg, var(--blue), var(--mauve));
     border-radius: 24px; padding: 36px 44px;
     max-width: 680px; text-align: left;
-    box-shadow: 0 16px 56px rgba(0,0,0,0.25);
+    box-shadow: 0 12px 48px rgba(115,143,189,0.35);
   }
   .contact-cta-box p {
-    font-size: 20px; font-weight: 600; color: var(--dark); line-height: 1.4;
+    font-size: 20px; font-weight: 600; color: white; line-height: 1.4;
   }
   .contact-cta-box span {
-    display: block; font-size: 14px; color: var(--mid); margin-top: 8px;
+    display: block; font-size: 14px; color: rgba(255,255,255,0.55); margin-top: 8px;
   }
   .btn-white {
     display: inline-flex; align-items: center; gap: 10px;
-    background: linear-gradient(135deg, #5a5fc0 0%, #9b3a8a 60%, #b3106c 100%); color: #ffffff;
+    background: var(--pink-lt); color: var(--dark);
     font-family: 'Nunito', sans-serif;
-    font-size: 17px; font-weight: 800; letter-spacing: 0.06em;
-    padding: 18px 40px; border-radius: 50px;
+    font-size: 15px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 16px 36px; border-radius: 50px;
     text-decoration: none;
-    transition: transform .25s, box-shadow .25s, filter .25s;
-    box-shadow: 0 8px 30px rgba(155,58,138,0.45);
-    white-space: nowrap;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    transition: transform .2s, box-shadow .2s, background .2s;
+    box-shadow: 0 8px 30px rgba(238,198,199,0.5);
   }
-  .btn-white:hover { transform: translateY(-3px); filter: brightness(1.1); box-shadow: 0 16px 40px rgba(155,58,138,0.55); }
+  .btn-white:hover { transform: translateY(-2px); background: white; box-shadow: 0 12px 40px rgba(238,198,199,0.6); }
 
   /* ── FOOTER ── */
   footer {
@@ -1180,9 +1178,8 @@ ReactDOM.createRoot(document.getElementById('tweaks-root')).render(/*#__PURE__*/
 <section class="product" id="product">
   <div class="reveal visible">
     <div class="section-tag" data-lang-key="product-tag">— Программа менторства</div>
-    <h2><span data-lang-key="product-h2">За 2 месяца выстраиваем<br>LinkedIn, который <em style="color: rgb(179, 16, 108)">работает</em></span></h2>
-    <p class="lead" data-lang-key="product-lead">От аудита профиля до системного контента и нужных контактов — всё в 1:1 формате.
-</p>
+    <h2><span data-lang-key="product-h2">Твой опыт уже есть.<br>Давай сделаем его<br><em>заметным</em></span></h2>
+    <p class="lead" data-lang-key="product-lead">Два месяца работы над твоим личным брендом в LinkedIn: от разбора профиля до позиционирования, контента и целевых контактов.</p>
   </div>
   <div class="product-grid">
     <div class="product-items reveal visible">
@@ -1289,7 +1286,7 @@ ReactDOM.createRoot(document.getElementById('tweaks-root')).render(/*#__PURE__*/
 <section class="cases" id="cases" style="opacity: 1;">
   <div class="reveal visible" style="">
     <div class="section-tag" data-lang-key="cases-tag" style="color: rgb(64, 101, 160);">— Кейсы и отзывы</div>
-    <h2 style=""><span data-lang-key="cases-h2" style="">Реальные <em style="">результаты</em> клиентов</span></h2>
+    <h2 style=""><span data-lang-key="cases-h2" style="">Кейсы и <em style="">сценарии работы</em></span></h2>
   </div>
   <div class="cases-grid" style="">
     <div class="case-card case-card--structured reveal visible" style="">
@@ -1391,9 +1388,13 @@ ReactDOM.createRoot(document.getElementById('tweaks-root')).render(/*#__PURE__*/
 <section class="contact" id="contact">
   <div class="contact-inner reveal">
     <div class="section-tag" data-lang-key="contact-tag">— Связаться</div>
-    <h2 class="contact-heading" data-lang-key="contact-h2">Давай <em>знакомиться</em></h2>
+    <h2 class="contact-heading" data-lang-key="contact-h2">Давай<br><em>знакомиться</em></h2>
     <p class="lead contact-lead" data-lang-key="contact-lead">Напиши в Telegram — отвечаю быстро. Или выбери удобный способ связи.</p>
     <div class="contact-links">
+      <a href="https://t.me/arryuha" target="_blank" class="contact-link" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.012 9.483c-.147.659-.535.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.06 14.384l-2.95-.924c-.642-.2-.655-.642.136-.953l11.526-4.445c.535-.194 1.003.13.79.186z"></path></svg>
+        <span data-lang-key="contact-telegram">Telegram</span>
+      </a>
       <a href="mailto:arinaartemenko1410@gmail.com" class="contact-link" rel="noopener" id="contact-mail-link">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 7 10-7"></path></svg>
         <span id="contact-email-label">arinaartemenko1410@gmail.com</span>
@@ -1407,7 +1408,7 @@ ReactDOM.createRoot(document.getElementById('tweaks-root')).render(/*#__PURE__*/
           </div>
           <a href="https://t.me/arryuha" target="_blank" class="btn-white" style="white-space:nowrap;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.012 9.483c-.147.659-.535.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.06 14.384l-2.95-.924c-.642-.2-.655-.642.136-.953l11.526-4.445c.535-.194 1.003.13.79.186z"></path></svg>
-            <span data-lang-key="cta-btn" style="color: white; margin: 2px 0px 0px; font-size: 15px; font-weight: 800">Написать</span>
+            <span data-lang-key="cta-btn">Написать</span>
           </a>
         </div>
     </div>
